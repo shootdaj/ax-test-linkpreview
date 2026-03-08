@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Preview Service</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Link Preview</h1>
+      <p class="subtitle">Paste a URL to generate a rich preview card</p>
+    </header>
+
+    <form id="preview-form">
+      <div class="input-group">
+        <input
+          type="url"
+          id="url-input"
+          placeholder="https://example.com"
+          required
+          autocomplete="url"
+          autofocus
+        >
+        <button type="submit" id="submit-btn">Preview</button>
+      </div>
+    </form>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Fetching preview...</p>
+    </div>
+
+    <div id="error" class="error hidden">
+      <p id="error-message"></p>
+    </div>
+
+    <div id="preview-card" class="preview-card hidden">
+      <a id="card-link" href="#" target="_blank" rel="noopener noreferrer">
+        <div id="card-image-container" class="card-image-container hidden">
+          <img id="card-image" alt="Preview image" loading="lazy">
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <img id="card-favicon" class="card-favicon" alt="" width="16" height="16">
+            <span id="card-domain" class="card-domain"></span>
+          </div>
+          <h2 id="card-title" class="card-title"></h2>
+          <p id="card-description" class="card-description"></p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
