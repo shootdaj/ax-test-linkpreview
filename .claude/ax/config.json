@@ -29,19 +29,73 @@
   "deployment": {
     "type": "web-app",
     "provider": "vercel",
-    "url": null
+    "url": "https://ax-test-linkpreview.vercel.app"
   },
   "ci": {
     "provider": "github-actions",
     "workflow_file": ".github/workflows/ci.yml"
   },
-  "phases_completed": [],
-  "milestone_history": [],
+  "phases_completed": [
+    {
+      "phase": 1,
+      "title": "Core API",
+      "started_at": "2026-03-09T10:05:00Z",
+      "completed_at": "2026-03-09T10:15:00Z"
+    },
+    {
+      "phase": 2,
+      "title": "Web UI",
+      "started_at": "2026-03-09T10:15:00Z",
+      "completed_at": "2026-03-09T10:25:00Z"
+    },
+    {
+      "phase": 3,
+      "title": "Hardening",
+      "started_at": "2026-03-09T10:25:00Z",
+      "completed_at": "2026-03-09T10:35:00Z"
+    }
+  ],
+  "milestone_history": [
+    {
+      "version": "v1.0",
+      "project_name": "linkpreview",
+      "phases_completed": [
+        {
+          "phase": 1,
+          "title": "Core API",
+          "started_at": "2026-03-09T10:05:00Z",
+          "completed_at": "2026-03-09T10:15:00Z"
+        },
+        {
+          "phase": 2,
+          "title": "Web UI",
+          "started_at": "2026-03-09T10:15:00Z",
+          "completed_at": "2026-03-09T10:25:00Z"
+        },
+        {
+          "phase": 3,
+          "title": "Hardening",
+          "started_at": "2026-03-09T10:25:00Z",
+          "completed_at": "2026-03-09T10:35:00Z"
+        }
+      ],
+      "completed_at": "2026-03-09T10:40:00Z",
+      "deployment": {
+        "provider": "vercel",
+        "url": "https://ax-test-linkpreview.vercel.app"
+      },
+      "test_results": {
+        "unit": { "passed": 47, "failed": 0 },
+        "integration": { "passed": 13, "failed": 0 },
+        "scenario": { "passed": 6, "failed": 0 }
+      }
+    }
+  ],
   "last_commands": {
     "init": "2026-03-09T10:00:00Z",
-    "phase": null,
+    "phase": "2026-03-09T10:35:00Z",
     "run": null,
-    "finish": null,
+    "finish": "2026-03-09T10:40:00Z",
     "status": null
   }
 }

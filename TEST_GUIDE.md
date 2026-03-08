@@ -28,12 +28,33 @@ npx vitest run --dir src && \
 
 ## Requirement -> Test Mapping
 
-<!-- Updated automatically after each phase -->
-
 | Requirement | Unit Tests | Integration Tests | Scenario Tests | Status |
 |---|---|---|---|---|
-| _To be filled after Phase 1_ | | | | Pending |
+| R1: URL Metadata Extraction | `extractMetadata`, `getTitle`, `getDescription`, `getImage`, `getFavicon`, `getSiteName`, `resolveUrl` (26 tests) | `POST /api/preview` with real URL | Full preview workflow | Covered |
+| R2: Preview API | - | `GET /health`, `POST /api/preview` (6 tests) | Full preview workflow, static file serving | Covered |
+| R3: Web UI | - | - | `serve web UI at root`, `serve static CSS/JS`, full workflow with card display (6 tests) | Covered |
+| R4: Input Validation | `validateUrl`, `isPrivateHostname` (16 tests) | Reject private URLs, reject long URLs, reject non-HTTP, reject invalid format (7 tests) | Invalid input scenario | Covered |
+| R5: Security | `createRateLimiter` (5 tests) | Helmet headers, CORS, rate limit headers (7 tests) | - | Covered |
 
 ## Phase Coverage Log
 
-<!-- Appended after each /ax:phase run -->
+### Phase 1: Core API
+- **New unit tests:** 26
+- **New integration tests:** 6
+- **New scenario tests:** 0
+- **Requirements covered:** R1, R2 (partial R4)
+- **Gaps:** None
+
+### Phase 2: Web UI
+- **New unit tests:** 0
+- **New integration tests:** 0
+- **New scenario tests:** 6
+- **Requirements covered:** R3
+- **Gaps:** None
+
+### Phase 3: Hardening
+- **New unit tests:** 21
+- **New integration tests:** 7
+- **New scenario tests:** 0
+- **Requirements covered:** R4 (full), R5
+- **Gaps:** None
