@@ -1,0 +1,28 @@
+{
+  "name": "linkpreview",
+  "version": "1.0.0",
+  "description": "A web app that fetches URL metadata and displays rich preview cards",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "test": "vitest run",
+    "test:unit": "vitest run --dir src",
+    "test:integration": "vitest run --dir test/integration",
+    "test:scenarios": "vitest run --dir test/scenarios",
+    "lint": "echo 'No linter configured yet'"
+  },
+  "keywords": ["link-preview", "metadata", "og-tags"],
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^8.0.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0",
+    "vitest": "^2.1.0"
+  }
+}

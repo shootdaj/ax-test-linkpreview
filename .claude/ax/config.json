@@ -1,0 +1,47 @@
+{
+  "initialized_at": "2026-03-09T10:00:00Z",
+  "project_name": "linkpreview",
+  "mode": "greenfield",
+  "profile": "quality",
+  "notion": {
+    "parent_page_id": null,
+    "doc_pages": {
+      "architecture": null,
+      "data_flow": null,
+      "api_reference": null,
+      "component_index": null,
+      "adrs": null,
+      "deployment": null,
+      "dev_workflow": null,
+      "phase_reports": null
+    },
+    "last_updated": null
+  },
+  "testing": {
+    "stack": "node",
+    "language_version": "20",
+    "test_framework": "vitest",
+    "unit_command": "npx vitest run --dir src",
+    "integration_command": "npx vitest run --dir test/integration",
+    "scenario_command": "npx vitest run --dir test/scenarios",
+    "docker_compose_file": null
+  },
+  "deployment": {
+    "type": "web-app",
+    "provider": "vercel",
+    "url": null
+  },
+  "ci": {
+    "provider": "github-actions",
+    "workflow_file": ".github/workflows/ci.yml"
+  },
+  "phases_completed": [],
+  "milestone_history": [],
+  "last_commands": {
+    "init": "2026-03-09T10:00:00Z",
+    "phase": null,
+    "run": null,
+    "finish": null,
+    "status": null
+  }
+}
